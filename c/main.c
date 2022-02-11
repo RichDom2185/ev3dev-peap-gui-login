@@ -1,5 +1,3 @@
-// #include "src/ev3devkit-0.5.h"
-// #include "src/grx-3.0.h"
 #include <ev3devkit-0.5.h>
 #include <grx-3.0.h>
 #include <stdio.h>
@@ -31,11 +29,12 @@ static void activate(Ev3devKitConsoleApp *app)
     // ev3dev_kit_ui_window_show(EV3DEV_KIT_UI_WINDOW(usernameDialog));
     // sleep(3);
     // ev3dev_kit_ui_window_close(EV3DEV_KIT_UI_WINDOW(messageDialog));
-    ev3dev_kit_ui_widget_draw_content(EV3DEV_KIT_UI_WIDGET(window));
-    ev3dev_kit_ui_window_show(window);
-    ev3dev_kit_ui_widget_draw_content(EV3DEV_KIT_UI_WIDGET(window));
+    ev3dev_kit_ui_widget_draw_content(EV3DEV_KIT_UI_WIDGET(usernameDialog));
+    ev3dev_kit_ui_widget_draw_background(EV3DEV_KIT_UI_WIDGET(usernameDialog));
+    ev3dev_kit_ui_window_show(EV3DEV_KIT_UI_WINDOW(usernameDialog));
+    ev3dev_kit_ui_widget_draw_content(EV3DEV_KIT_UI_WIDGET(usernameDialog));
     sleep(3);
-    ev3dev_kit_ui_window_close(window);
+    ev3dev_kit_ui_window_close(EV3DEV_KIT_UI_WINDOW(usernameDialog));
 }
 
 int main(int argc, char *argv[])
