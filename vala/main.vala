@@ -1,7 +1,7 @@
 // build command : valac --pkg linux --pkg posix --pkg ev3devkit-0.5 --pkg gio-unix-2.0 --pkg grx-3.0 --pkg glib-2.0 --pkg gudev-1.0 main.vala -o bin
 using Ev3devKit.Ui;
 
-static string generate_credential_file_string(string username, string password)
+static string generate_credential_file_string (string username, string password)
 {
     return """[global]
 Name=NUS_STU
