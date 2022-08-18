@@ -54,8 +54,8 @@ static int main (string[] args)
                     data_stream.put_string (credential_file_string);
                 } // Stream closes automatically at this point.
 
-                var mesage_label = new Label ("Saved!\nUsername: " + username + "\nPassword: " + password);
-                mesage_label.margin = 4;
+                var message_label = new Label ("Saved!\nUsername: " + username + "\nPassword: " + password);
+                message_label.margin = 4;
 
                 var quit_button = new Button ();
                 quit_button.horizontal_align = WidgetAlign.CENTER;
@@ -76,7 +76,7 @@ static int main (string[] args)
                 vbox.padding_top = 2;
                 vbox.padding_bottom = 6;
                 vbox.spacing = 2;
-                vbox.add (mesage_label);
+                vbox.add (message_label);
                 vbox.add (quit_button);
                 message_dialog.add (vbox);
 
